@@ -1,18 +1,12 @@
 /* jshint node:true */
 "use strict";
 
-var fpcalc = require("fpcalc");
-
-module.exports = function(file, options, callback) {
+module.exports = function(fingerprint, duration, options, callback) {
 	if ( ! options || ! options.key) {
 		throw new Error("Options object with `options.key` is required.");
 	}
 
-	fpcalc(file, options.fpcalc || {}, function(err, result) {
-		if (err) return callback(err);
-		// Return track info
-		getinfo(result, options, callback);
-	});
+  getinfo({ fingerprint: fingerprint, duration: duration }, options, callback);
 };
 // -- Get track information given fingerprint
 

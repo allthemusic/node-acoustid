@@ -22,7 +22,6 @@
   "license": "Public Domain",
   "dependencies": {
     "concat-stream": "^1.4.6",
-    "fpcalc": "^1.1.0",
     "hyperquest": "^0.3.0"
   },
   "devDependencies": {
